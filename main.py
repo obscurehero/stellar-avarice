@@ -197,10 +197,8 @@ def main():
 			prompt = raw_input("Which build would you like [public|test]?\n>").lower()
 			if prompt.strip() == 'public':
 				build = 'public'
-				break
-			if prompt.strip() == 'test':
+			elif prompt.strip() == 'test':
 				build = 'test'
-				break
 		sel_build = new_build_check(build)
 		print "\nLatest Build: {}".format(latest_build())
 		print "Selected Build: {}".format(sel_build)
